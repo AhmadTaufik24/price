@@ -13,7 +13,6 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* FIX UTAMA: Cegah halaman geser ke kiri/kanan tapi nggak nge-lock layout */
 html, body {
     width: 100%;
     overflow-x: hidden;
@@ -88,7 +87,7 @@ body {
 }
 
 /* =========================================
-   KONTEN KATEGORI & BANNER
+   KONTEN KATEGORI & BANNER (FIXED VIEWPORT)
    ========================================= */
 .category-content { display: none; animation: fadeIn 0.4s ease; }
 .category-content.active { display: block; }
@@ -111,27 +110,35 @@ body {
 .banner-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 24px;
+    /* Gradasi gelap di bawah agar tulisan judul putih kontras terkesan premium */
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
 }
+
+/* FIX JUDUL: Dikunci di kiri bawah secara independen */
 .banner-overlay h2 {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
     color: #fff;
     font-size: 1.8rem;
     font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    margin: 0;
 }
+
+/* FIX TOMBOL: Dikunci di kanan atas bergaya aksi overlay panel modern */
 .share-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
     background: rgba(255,255,255,0.25);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255,255,255,0.6);
     color: #fff;
-    padding: 10px 18px;
-    border-radius: 10px;
-    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
@@ -243,7 +250,7 @@ body {
 .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
 /* =========================================
-   RESPONSIVITAS KHUSUS HP (SUDAH DI-FIX!)
+   RESPONSIVITAS KHUSUS HP (BALANCED + FIXED POSITION)
    ========================================= */
 @media (max-width: 600px) {
     .pricelist-container { 
@@ -269,28 +276,27 @@ body {
         padding: 8px 14px;
     }
 
+    /* Dimensi Banner di HP */
     .category-banner { 
-        height: 180px; 
+        height: 160px; 
         border-radius: 12px;
         margin-bottom: 25px;
     }
-    .banner-overlay { 
-        flex-direction: column; 
-        align-items: stretch; 
-        justify-content: flex-end; 
-        padding: 20px;
-        gap: 12px;
+    
+    /* Atur ulang posisi absolut di resolusi HP */
+    .banner-overlay h2 { 
+        font-size: 1.4rem; 
+        left: 16px;
+        bottom: 16px;
     }
-    .banner-overlay h2 { font-size: 1.5rem; }
     .share-btn {
-        width: 100%;
-        justify-content: center;
-        padding: 12px;
-        font-size: 0.95rem;
-        border-radius: 8px;
+        top: 16px;
+        right: 16px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        border-radius: 6px;
     }
 
-    /* INI BIANG KEROKNYA: Harus diset jadi 1fr biar nggak maksa ngelebarin layar HP */
     .pricing-grid { 
         grid-template-columns: 1fr; 
         gap: 24px; 
