@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taufik - Pricelist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="pricelist-container">
+        
+        <div class="pricelist-header">
+            <h1>Investment & Packages</h1>
+            <p>Dokumentasi itu penting, tapi milih paketnya nggak perlu dibikin ribet. Udah aku ratain beberapa opsi yang bisa kamu cocokin sama kebutuhan acara kamu yaaa!.</p>
+        </div>
+
+        <div class="tab-navigation" id="tabNav">
+            <button class="tab-btn active" data-target="engagement">Engagement</button>
+            <button class="tab-btn" data-target="wedding">Wedding</button>
+            <button class="tab-btn" data-target="prewedding">Pre-Wedding</button>
+        </div>
+
+        <div id="engagement" class="category-content active">
+            <div class="category-banner">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1200" alt="Engagement Photography">
+                <div class="banner-overlay">
+                    <h2>Engagement Packages</h2>
+                    <button class="share-btn" onclick="sharePackage('engagement')">
+                        <i class="fa-solid fa-link"></i> Copy Link Klien
+                    </button>
+                </div>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Silver</h3>
+                    <div class="price">Rp 1.050.000</div>
+                    <p class="description">Pas banget buat acara lamaran yang intimate. Simpel, santai, tapi vibe momennya tetep dapet.</p>
+                    <ul class="benefits">
+                        <li><i class="fa-solid fa-check"></i> 1 Fotografer</li>
+                        <li><i class="fa-solid fa-check"></i> 2-3 Jam Sesi Foto</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Foto (All Files)</li>
+                        <li><i class="fa-solid fa-check"></i> 65 Edited Photos (Tone & Retouch)</li>
+                        <li><i class="fa-solid fa-check"></i> All Files via Google Drive</li>
+                        <li class="highlight"><i class="fa-solid fa-star"></i> Bonus: 1 cetak 30x20cm</li>
+                    </ul>
+                    <a href="https://wa.me/6283195333168?text=Halo%20Taufik,%20saya%20tertarik%20dengan%20Paket%20Silver%20Engagement" class="book-btn">Pilih Paket Ini</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="badge">Best Value</div>
+                    <h3>Gold</h3>
+                    <div class="price">Rp 2.450.000</div>
+                    <p class="description">Paket favorit anti-nanggung! Udah dapet foto komplit plus video cinematic kece buat bahan posting di sosmed.</p>
+                    <ul class="benefits">
+                        <li><i class="fa-solid fa-check"></i> 1 Fotografer & 1 Videografer</li>
+                        <li><i class="fa-solid fa-check"></i> 3-4 Jam Sesi Liputan</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Foto (All Files)</li>
+                        <li><i class="fa-solid fa-check"></i> 90 Edited Photos</li>
+                        <li><i class="fa-solid fa-check"></i> Cinematic Video (2-3 Menit)</li>
+                        <li><i class="fa-solid fa-check"></i> 1x Cetak Frame Eksklusif 12R</li>
+                        <li><i class="fa-solid fa-check"></i> Free 1 Flashdisk</li>
+                        <li><i class="fa-solid fa-check"></i> All Files via Google Drive & Flashdisk</li>
+                         
+                    </ul>
+                    <a href="https://wa.me/6283195333168?text=Halo%20Taufik,%20saya%20tertarik%20dengan%20Paket%20Gold%20Engagement" class="book-btn primary">Pilih Paket Ini</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Platinum</h3>
+                    <div class="price">Rp 4.350.000</div>
+                    <p class="description">buat kamu yang pengen terima beres dan all-in. Lebih lengkap, dapet album fisik, plus dikasih semua file mentahnya!</p>
+                    <ul class="benefits">
+                        <li><i class="fa-solid fa-check"></i> 1 Fotografer & 1 Videografer</li>
+                        <li><i class="fa-solid fa-check"></i> Up to 6 Jam Liputan</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Foto (All Files)</li>
+                        <li><i class="fa-solid fa-check"></i> All Good Photos Edited</li>
+                        <li><i class="fa-solid fa-check"></i> Cinematic Video (3-5 Menit)</li>
+                        <li><i class="fa-solid fa-check"></i> Premium Album 20 Halaman</li>
+                        <li><i class="fa-solid fa-check"></i> Cetak Frame 16R</li>
+                        <li><i class="fa-solid fa-check"></i> Free 1 Flashdisk</li>
+                        <li><i class="fa-solid fa-check"></i> All Files via Google Drive & Flashdisk</li>
+                        <li class="highlight"><i class="fa-solid fa-star"></i> Free RAW Files</li>
+                    </ul>
+                    <a href="https://wa.me/6283195333168?text=Halo%20Taufik,%20saya%20tertarik%20dengan%20Paket%20Platinum%20Engagement" class="book-btn">Pilih Paket Ini</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="wedding" class="category-content">
+            <div class="category-banner">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200" alt="Wedding Photography">
+                <div class="banner-overlay">
+                    <h2>Wedding Packages</h2>
+                    <button class="share-btn" onclick="sharePackage('wedding')">
+                        <i class="fa-solid fa-link"></i> Copy Link Klien
+                    </button>
+                </div>
+            </div>
+            <div class="placeholder-box">
+                <i class="fa-solid fa-rings-wedding"></i>
+                <p>Paket Wedding sedang dalam penyesuaian harga terbaik. Segera hadir!</p>
+            </div>
+        </div>
+
+        <div id="prewedding" class="category-content">
+            <div class="category-banner">
+                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200" alt="Pre-Wedding Photography">
+                <div class="banner-overlay">
+                    <h2>Pre-Wedding Packages</h2>
+                    <button class="share-btn" onclick="sharePackage('prewedding')">
+                        <i class="fa-solid fa-link"></i> Copy Link Klien
+                    </button>
+                </div>
+            </div>
+            <div class="placeholder-box">
+                <i class="fa-solid fa-camera-retro"></i>
+                <p>Paket Pre-Wedding sedang dalam penyesuaian harga terbaik. Segera hadir!</p>
+            </div>
+        </div>
+</div> <!-- Penutup pricing-grid -->
+
+            <!-- Box Note Santai -->
+            <div class="pricing-terms">
+                <i class="fa-solid fa-circle-info"></i>
+                <p><strong>Btw,</strong> harga di atas belum termasuk fee transport. Dan kalau overtime ada biaya 200k/orang yaa!</p>
+            </div>
+    </main>
+
+    <div id="toast" class="toast"><i class="fa-solid fa-circle-check"></i> Link klien berhasil disalin!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
