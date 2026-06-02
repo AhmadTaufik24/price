@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryContents = document.querySelectorAll('.category-content');
     const tabNavContainer = document.getElementById('tabNav');
     const shareBtns = document.querySelectorAll('.share-btn');
-    const pricelistHeader = document.querySelector('.pricelist-header');
-
+    
     // 1. CEK URL UNTUK MODE "KLIEN"
     // Mengecek apakah di URL ada parameter ?share=namapaket
     const urlParams = new URLSearchParams(window.location.search);
@@ -12,11 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (sharedCategory) {
         // --- MODE KLIEN AKTIF ---
+        
         // Sembunyikan navigasi tab (klien tidak bisa pindah paket)
         if (tabNavContainer) tabNavContainer.style.display = 'none';
         
-        // Sembunyikan header utama agar langsung fokus ke banner paket
-        if (pricelistHeader) pricelistHeader.style.display = 'none';
+        // Teks header "Investment & Packages" dan teks santai lu SEKARANG TETAP TAMPIL.
+        // (Kode yang sebelumnya menyembunyikan header sudah dihapus)
 
         // Sembunyikan tombol share (klien tidak butuh fitur copy link)
         shareBtns.forEach(btn => btn.style.display = 'none');
