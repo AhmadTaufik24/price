@@ -19,6 +19,7 @@
 
         <div class="tab-navigation" id="tabNav">
             <button class="tab-btn active" data-target="engagement">Engagement</button>
+            <button class="tab-btn" data-target="dokumentasi">Dokumentasi Acara</button>
             <button class="tab-btn" data-target="wedding">Wedding</button>
             <button class="tab-btn" data-target="prewedding">Pre-Wedding</button>
         </div>
@@ -64,7 +65,6 @@
                         <li><i class="fa-solid fa-check"></i> 1x Cetak Frame Eksklusif 12R</li>
                         <li><i class="fa-solid fa-check"></i> Free 1 Flashdisk</li>
                         <li><i class="fa-solid fa-check"></i> All Files via Google Drive & Flashdisk</li>
-                         
                     </ul>
                     <a href="https://wa.me/6283195333168?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Gold%20Engagement" class="book-btn primary">Pilih Paket Ini</a>
                 </div>
@@ -90,6 +90,65 @@
             </div>
         </div>
 
+        <div id="dokumentasi" class="category-content">
+            <div class="category-banner">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200" alt="Event Documentation Photography">
+                <div class="banner-overlay">
+                    <h2>Event Packages</h2>
+                    <button class="share-btn" onclick="sharePackage('dokumentasi')">
+                        <i class="fa-solid fa-link"></i> Copy Link Klien
+                    </button>
+                </div>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Half-Day</h3>
+                    <div class="price">Rp 1.500.000</div>
+                    <p class="description">Ideal buat acara singkat maksimal 4-5 jam. Dokumentasi padat, momen penting tetap terekam rapi.</p>
+                    <ul class="benefits">
+                        <li><i class="fa-solid fa-check"></i> 1 Fotografer</li>
+                        <li><i class="fa-solid fa-check"></i> Maksimal 4-5 Jam Acara</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Foto (All Files)</li>
+                        <li><i class="fa-solid fa-check"></i> 50 Edited Photos</li>
+                        <li><i class="fa-solid fa-check"></i> All Files via Google Drive</li>
+                    </ul>
+                    <a href="https://wa.me/6283195333168?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Half-Day%20Dokumentasi%20Acara" class="book-btn">Pilih Paket Ini</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="badge">Highly Recommended</div>
+                    <h3>Hybrid (Foto + Video)</h3>
+                    <div class="price">Rp 3.500.000</div>
+                    <p class="description">Paket komplit buat event kamu! Dapet foto keseluruhan plus video cinematic highlight buat di-share.</p>
+                    <ul class="benefits">
+                        <li><i class="fa-solid fa-check"></i> 1 Fotografer & 1 Videografer</li>
+                        <li><i class="fa-solid fa-check"></i> Maksimal 8 Jam Acara</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Foto (All Files)</li>
+                        <li><i class="fa-solid fa-check"></i> 100 Edited Photos</li>
+                        <li><i class="fa-solid fa-check"></i> Video Highlight (2-3 Menit)</li>
+                        <li class="highlight"><i class="fa-solid fa-star"></i> All Files via Flashdisk & GDrive</li>
+                    </ul>
+                    <a href="https://wa.me/6283195333168?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Hybrid%20Dokumentasi%20Acara" class="book-btn primary">Pilih Paket Ini</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Full-Day</h3>
+                    <div class="price">Rp 2.500.000</div>
+                    <p class="description">Buat acara seharian maksimal 8 jam. Pas untuk corporate event, kumpul keluarga besar, atau ultah.</p>
+                    <ul class="benefits">
+                        <li><i class="fa-solid fa-check"></i> 1 Fotografer</li>
+                        <li><i class="fa-solid fa-check"></i> Maksimal 8 Jam Acara</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Foto (All Files)</li>
+                        <li><i class="fa-solid fa-check"></i> 100 Edited Photos</li>
+                        <li><i class="fa-solid fa-check"></i> Free 1 Flashdisk</li>
+                        <li><i class="fa-solid fa-check"></i> All Files via Google Drive</li>
+                    </ul>
+                    <a href="https://wa.me/6283195333168?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Full-Day%20Dokumentasi%20Acara" class="book-btn">Pilih Paket Ini</a>
+                </div>
+            </div>
+        </div>
+
         <div id="wedding" class="category-content">
             <div class="category-banner">
                 <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200" alt="Wedding Photography">
@@ -100,9 +159,9 @@
                     </button>
                 </div>
             </div>
-            <div class="placeholder-box">
-                <i class="fa-solid fa-rings-wedding"></i>
-                <p>Paket Wedding sedang dalam penyesuaian harga terbaik. Segera hadir!</p>
+            <div class="placeholder-box" style="text-align: center; padding: 50px 20px; background: white; border-radius: 12px; border: 1px solid var(--border);">
+                <i class="fa-solid fa-rings-wedding" style="font-size: 2rem; color: var(--brand-blue); margin-bottom: 10px;"></i>
+                <p style="color: var(--text-muted);">Paket Wedding sedang dalam penyesuaian harga terbaik. Segera hadir!</p>
             </div>
         </div>
 
@@ -116,18 +175,16 @@
                     </button>
                 </div>
             </div>
-            <div class="placeholder-box">
-                <i class="fa-solid fa-camera-retro"></i>
-                <p>Paket Pre-Wedding sedang dalam penyesuaian harga terbaik. Segera hadir!</p>
+            <div class="placeholder-box" style="text-align: center; padding: 50px 20px; background: white; border-radius: 12px; border: 1px solid var(--border);">
+                <i class="fa-solid fa-camera-retro" style="font-size: 2rem; color: var(--brand-blue); margin-bottom: 10px;"></i>
+                <p style="color: var(--text-muted);">Paket Pre-Wedding sedang dalam penyesuaian harga terbaik. Segera hadir!</p>
             </div>
         </div>
-</div> <!-- Penutup pricing-grid -->
 
-            <!-- Box Note Santai -->
-            <div class="pricing-terms">
-                <i class="fa-solid fa-circle-info"></i>
-                <p><strong>Btw,</strong> harga di atas belum termasuk fee transport. Dan kalau overtime ada biaya 200k/orang yaa!</p>
-            </div>
+        <div class="pricing-terms">
+            <i class="fa-solid fa-circle-info"></i>
+            <p><strong>Btw,</strong> harga di atas belum termasuk fee transport. Dan kalau overtime ada biaya 200k/orang yaa!</p>
+        </div>
     </main>
 
     <div id="toast" class="toast"><i class="fa-solid fa-circle-check"></i> Link klien berhasil disalin!</div>
